@@ -1,0 +1,264 @@
+body{
+    background-color: #ecf0f1;
+    overflow: auto;
+    margin:0;
+    padding:0;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Vogue';
+    text-align: center;
+    color:#fff;
+    position:relative;
+    text-shadow: 1px 1px #FF7400, 2px 2px #FF7400;
+    animation:slideInLeft 1s ease-out;
+    letter-spacing: 2px;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.busca-control{
+    width:600px;
+    border:1px solid #ff7400;
+    border-radius: 20px;
+    height:40px;
+    padding:10px;
+    box-shadow: 0px 3px 3px #0f0f0faa;
+}
+
+.btn-primary{
+    margin-left: 10px;
+    background-color:#ff7400 !important;
+    border-color: #fff !important;
+    border-radius: 20px !important;
+    width:160px;
+    transition: .4s ease-in-out !important;
+    box-shadow: 0px 3px 3px #0f0f0faa;
+    font-family: 'Comfortaa';
+    font-size: 15px;
+}
+
+.btn-primary:hover{
+    background-color: #ff8f32 !important;
+    transition: .4s ease-in-out !important;
+}
+
+.buscador{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divisor{
+    margin:auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:120px;
+}
+
+.div1, .div2 {
+    flex: 1;
+    padding: 10px;
+}
+
+.div1{
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out 3s forwards;
+}
+
+.div2 {
+    height: 400px; 
+    overflow-y: auto; 
+}
+
+.div2::-webkit-scrollbar{
+    display:none;
+}
+
+.form-control{
+    width:80%;
+    margin-left:60px;
+    border:1px solid #FF7400;
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px #0f0f0faa;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.6s ease-out 3s forwards;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+label{
+    color:#ff7400;
+    margin-left:80px;
+    font-family: 'Vogue';
+    letter-spacing: 2px;
+    margin-top: -12px;
+    z-index: 1; 
+    position: absolute;
+    padding: 0 5px;
+    animation: fadeInUp 0.6s ease-out 3s forwards;
+    background: linear-gradient(to top, #fff 47%, #ecf0f1 53%);
+    background-size: 100% 100%;
+}
+
+#uno{
+    margin-left:240px;
+}
+
+.list-group {
+    width: 90%;
+    font-family: 'Comfortaa';
+    float: right;
+    margin-right: 20px;
+    box-shadow: 0px 0px 3px #0f0f0f;
+    opacity: 1;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out 3s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.completed {
+    background-color: #228B22; 
+    color: #FFFFFF;
+}
+
+.expired {
+    background-color: #8B0000;
+    color: #FFFFFF; 
+    border: 1px solid #ff0000; 
+}
+
+.pending {
+    background-color: #fff; 
+    color: #444; 
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    border-bottom: 1px solid #dadada;
+    box-shadow: 0px 0px 3px #0f0f0f;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 1000;
+    background-color: #ff7400;
+}
+
+.eje{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #ff7400;
+    transform: translateX(-50%);
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon input {
+    padding-right: 45px; 
+}
+
+.input-icon i {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff7400;
+    pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.task-btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.task-btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: white;
+}
+
+.task-btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.task-btn {
+    margin-right: 5px;
+}
+
+@keyframes tintineo {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.messageCon{
+    font-family: 'Comfortaa';
+    text-align: center;
+    font-size: 12px;
+    color:#28a745;
+}
